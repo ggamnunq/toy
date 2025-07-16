@@ -20,7 +20,7 @@
 #
 
 
-name: google-java-format-check
+name: google-java-format
 
 on: [pull_request]
 
