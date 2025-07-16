@@ -23,7 +23,7 @@ jobs:
           args: "--replace --aosp"
           files: "**/*.java"
           commit-message: "[STYLE][Github Action]: Application Of Google Java Format"
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ secrets.GH_GOOGLE_STYLE_TOKEN }}
           skip-commit: false
 
 
