@@ -16,9 +16,9 @@ public class SwaggerConfig {
     public OpenAPI toyAPI() {
 
         Info info = new Info()
-                .title("장난감 API")
-                .description("나만의 장난감")
-                .version("1.0.0");
+            .title("장난감 API")
+            .description("나만의 장난감")
+            .version("1.0.0");
 
         String jwtSchemeName = "JWT TOKEN";
 
@@ -33,11 +33,10 @@ public class SwaggerConfig {
 //                        .scheme("bearer")
 //                        .bearerFormat("JWT"));
 
-
         OpenAPI openAPI = new OpenAPI()
-                .info(info)
-                .addServersItem(new Server().url("http://localhost:8080").description("local server"))
-                .components(components);
+            .info(info)
+            .addServersItem(new Server().url("http://localhost:8080").description("local server"))
+            .components(components);
 
         openAPI.addExtension("x-swagger-ui-disable-cache", true);
         return openAPI;
