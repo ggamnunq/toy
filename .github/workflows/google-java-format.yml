@@ -16,7 +16,7 @@ jobs:
           args: "--replace --aosp"
           skip-commit: true
           commit-message: "Format : Google Java Format"
-          github-token: ${{ secrets.GH_TOKEN }}
+          # github-token: ${{ secrets.GH_TOKEN }}
 
 
 
