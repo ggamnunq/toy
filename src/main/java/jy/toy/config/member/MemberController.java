@@ -11,6 +11,7 @@ public class MemberController {
 
   @GetMapping
   public ResponseEntity<?> getMember() {
-    return null;
+      return
+          null;
   }
 }
