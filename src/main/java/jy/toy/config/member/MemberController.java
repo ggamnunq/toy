@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/member")
 public class MemberController {
 
-  @GetMapping
-  public ResponseEntity<?> getMember() {
-    return null;
-  }
+    @GetMapping
+    public ResponseEntity<?> getMember() {
+        return null;
+    }
 }
