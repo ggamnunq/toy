@@ -1,19 +1,35 @@
-name: google-java-format
+#name: google-java-format
+#
+#on: [push, pull_request]
+#
+#permissions:
+#  contents: write
+#
+#jobs:
+#
+#  formatting:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: axel-op/googlejavaformat-action@v3 # google-java-format 실행
+#        with:
+#          args: "--dry-run"
+#          skip-commit: true
+##          commit-message: "Format : Google Java Format"
+#          github-token: ${{ secrets.GH_TOKEN }}
+#
 
-on: [push, pull_request]
 
-permissions:
-  contents: write
+name: google-java-format-check
+
+on: [pull_request]
 
 jobs:
-
-  formatting:
+  check-formatting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: axel-op/googlejavaformat-action@v3 # google-java-format 실행
+      - uses: axel-op/googlejavaformat-action@v3
         with:
-          args: "--replace"
-          commit-message: "Format : Google Java Format"
-          github-token: ${{ secrets.GH_TOKEN }}
-
+          args: "--dry-run --set-exit-if-changed"
+          skip-commit: true
