@@ -1,6 +1,6 @@
 name: google-java-format
 
-on: [pull_request]
+on: [push, pull_request]
 jobs:
 
   formatting:
@@ -11,3 +11,4 @@ jobs:
         with:
           args: "--replace"
           commit-message: "Format : Google Java Format"
+          github-token: ${{ secrets.GH_TOKEN }}
