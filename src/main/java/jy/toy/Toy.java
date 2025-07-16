@@ -7,6 +7,7 @@ public class Toy {
     int yes = 1;
     if (yes == 1) {
       yes = 1;
+      System.out.println("hello");
     }
   }
 }
